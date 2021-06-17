@@ -33,7 +33,7 @@ Projekt valmis Tallinna Ülikooli informaatika bakalaureuseõppe aine 'Tarkvaraa
 1. EVKK portaal tuleb kloonida ja käima panna vastavalt readme failile: https://github.com/centre-for-educational-technology/evkk
 2. Lisa EVKK portaali failide hulka siin repositooriumis olevad failid (osasid faile tuleb üle kirjutada ning see on korrektne). Screenshotide kaust ei ole vajalik!
 3. Kuna see repositoorium lisab andmebaasi andmeid mida seal enne pole, siis peale failide ühendamist tuleb uuesti andmebaas migreerida: `:db:bootRun --args 'clean migrate seed'` (sama käsk on toodud välja EVKK readmes).
-4. Pythonile tuleb installeerida Stanza moodul (näiteks pip'i kaudu `pip install stanza`) (https://stanfordnlp.github.io/stanza/) ning kas käsitsi terminalist või lihtsa Python scripti abil jooksutada käsk `stanza.download('et')` mis laeb moodulile alla eesti keele paki. NB! Pythoni scripte jooksutab Java mis omakorda käivitab neid root kasutaja õigustest. Pythoni moodulid aga on kasutajapõhised ehk Stanza tuleb installeerida root kasutajana, vastasel korral moodulit ei leita.
+4. Pythonile tuleb installeerida Stanza moodul (näiteks pip'i kaudu `pip install stanza`) (https://stanfordnlp.github.io/stanza/) ning kas käsitsi terminalist või lihtsa Python scripti abil jooksutada käsk `stanza.download('et')` (loomulikult enne seda ka `import stanza`) mis laeb moodulile alla eesti keele paki. NB! Pythoni scripte jooksutab Java mis omakorda käivitab neid root kasutaja õigustest. Pythoni moodulid aga on kasutajapõhised ehk Stanza tuleb installeerida root kasutajana, vastasel korral moodulit ei leita.
 5. Seejärel asub meie rakendus EVKK portaalis aadressil /home.html (ehk siis tõenäoliselt localhost:3000/home.html)
 
 ## Ekraanipildid rakendusest
